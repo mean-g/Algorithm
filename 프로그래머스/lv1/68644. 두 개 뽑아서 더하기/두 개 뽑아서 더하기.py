@@ -1,8 +1,12 @@
-import itertools
+# import itertools
+
+# def solution(numbers):
+#     answer = []
+#     for i in itertools.combinations(numbers, 2):
+#         answer.append (sum(i))
+#     return sorted(set(answer))
+
+from itertools import combinations
 
 def solution(numbers):
-    answer = []
-    for i in itertools.combinations(numbers, 2):
-        # if sum(i) not in answer:
-        answer.append (sum(i))
-    return sorted(set(answer))
+    return sorted(set(sum(i) for i in list(combinations(numbers, 2))))
