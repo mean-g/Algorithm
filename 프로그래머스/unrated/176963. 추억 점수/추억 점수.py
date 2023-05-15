@@ -1,14 +1,11 @@
-# def solution(name, yearning, photo):
-#     answer = [ ]
-    
-#     for i in range(len(photo)):
-#         score = 0
-#         for j in range(len(name)):
-#             if name[j] in photo[i]:
-#                 score += yearning[j]
-#         answer.append(score)
-                
-#     return answer
-
 def solution(name, yearning, photo):
-    return [sum(yearning[name.index(j)]for j in i if j in name)for i in photo]
+    answer = [ ]
+    
+    for i in range(len(photo)):
+        score = 0
+        for j in range(len(name)):
+            if name[j] in photo[i]:
+                score += yearning[j]
+        answer.append(score)
+                
+    return answer
